@@ -1,0 +1,190 @@
+@maincolor-default: #3a3a3a;
+@color-match: #eada93;
+
+#entity-select {
+  margin-bottom: 15px;
+}
+
+#page-course-view-edadmin {
+  overflow: initial;
+
+  #page-header {
+    button {
+      display: none;
+    }
+  }
+
+  #nav-drawer {
+    .list-group-item {
+      &[data-key=participants],
+      &[data-key=competencies],
+      &[data-key=grades],
+      &[data-key=badgesview] {
+
+        display: none;
+      }
+    }
+  }
+
+  button.dt-button {
+    padding: 2px 5px 2px 5px;
+    margin: 4px;
+    color: #fff;
+    background-color: #1177d1;
+    border: 1px solid transparent;
+  }
+
+  div.modal-error-message {
+    font-size: 20px;
+    margin: 15px;
+    text-align: center;
+  }
+
+  .edadmin-modal {
+    box-shadow: none;
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.3);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 4050;
+    }
+
+    .modal-content {
+      position: fixed;
+      transform: translate(-50%, -50%);
+      left: 50%;
+      top: 50%;
+      width: 300px;
+      margin: auto;
+      border: none;
+      outline: 0;
+      background: #FFF;
+      z-index: 4100;
+      box-sizing: border-box;
+      box-shadow: 1px 2px 5px 0 rgba(30, 36, 69, 0.2);
+      border-radius: 10px;
+
+      .header {
+        background: @maincolor-default;
+        border-radius: 10px 10px 0px 0px;
+        text-align: center;
+        height: 44px;
+        line-height: 44px;
+        font-size: 23px;
+        padding-left: 8px;
+        position: relative;
+        color: #FFF;
+        text-transform: uppercase;
+      }
+
+      .modal-main-content {
+        position: relative;
+        box-sizing: border-box;
+
+        div {
+          text-align: center;
+        }
+
+        .buttons {
+          font-size: 20px;
+          margin-top: 20px;
+          margin-bottom: 20px;
+        }
+
+      }
+
+      .close {
+        float: right;
+        margin-right: 8px;
+        margin-top: 11px;
+        color: #FFF;
+        opacity: 1;
+        background-size: cover;
+        width: 15px;
+        height: 15px;
+        display: block;
+        cursor: pointer;
+        background-image: url("[[pix:format_edadmin|close]]");
+      }
+
+      select {
+        font-size: 20px;
+      }
+    }
+
+    .buttons {
+      margin-bottom: 10px;
+    }
+  }
+
+  #error-popup-modal {
+    .overlay {
+      z-index: 4050;
+    }
+
+    .modal-content {
+      min-width: 300px;
+      height: 250px;
+      z-index: 4100;
+
+      .modal-main-content {
+        box-sizing: border-box;
+        padding: 20px;
+        height: ~"calc( 100% - 40px)";
+
+        .message {
+          height: ~"calc(100% - 45px)";
+          overflow: auto;
+        }
+
+        .buttons {
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  #error-popup {
+    width: 300px;
+    height: 200px !important;
+
+    .buttons {
+      margin-top: 50px;
+    }
+  }
+
+  .edadmin-button {
+    margin: 5px 20px 5px 20px;
+    background: none;
+    -webkit-appearance: button;
+    border-radius: 0;
+    padding: 6px 14px;
+    outline: none;
+    border: none;
+    display: inline-block;
+    box-shadow: 1px 1px 14px 0 rgba(30, 36, 69, 0.2);
+    text-shadow: none;
+    min-width: 125px;
+    color: @maincolor-default;
+
+    &[disabled] {
+      background: #d8d8d8;
+    }
+
+    &:hover, &:active, &:focus {
+      background-image: none;
+      background-color: rgb(229, 229, 229);
+      text-shadow: none;
+      color: inherit;
+      outline: none;
+      outline-offset: inherit;
+      box-shadow: 1px 1px 14px 0 rgba(30, 36, 69, 0.2);
+      cursor: pointer;
+    }
+  }
+
+}
