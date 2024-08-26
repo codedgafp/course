@@ -1,0 +1,8 @@
+stages:
+  - ci
+
+trigger_mentor_plugins:
+  stage: ci
+  trigger:
+    project: Mentor/mentor-plugins
+    branch: split-mentor-plugins
